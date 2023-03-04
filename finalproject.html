@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final.css">
+    <style>
+        body{
+            background-color: #e1eeff;
+        }
+        h1{
+            text-align: center;
+            color: #543a3a;
+        }
+        h2{
+            text-align: center;
+            color: #543a3a;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: #989c9f;
+            font-weight: bold;
+        }
+        .contaner{
+            background: #543a3a; 
+            border: 1px solid black;
+            margin: 1rem 0;
+            padding: 2rem 2rem;
+            text-align: center;
+            max-height: 100%;
+        }
+        .image{
+            background: #fafafa;
+            text-align: center;
+            max-width:  33.33em;
+            display: inline-block;
+            border:none;
+            border-radius: 50px;
+            padding: 1rem 1rem;
+            vertical-align: middle;
+            height: 500px;
+        }
+        .image p{
+            line-height: 2rem;
+        }
+        #left{
+            margin-right: 2rem;
+        }
+        button{
+            font-size: large;
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            border: none;
+            background-color:#543a3a;
+            color:#e1eeff;
+            cursor: pointer;
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 1px 10px #989c9f;
+            transition: width 2s;
+        }
+        button:hover{
+            background-color: #e1eeff;
+            color: #543a3a;
+            width: 250px;
+        }
+    </style>
+    <title> DOG</title>
+</head>
+<body>
+    <h1>welcome to my webpage</h1>
+    <h2>My name is  Hadis and in this page we talk about <span style="color:saddlebrown">dogs</span> 🐾</h2>
+    <a href="https://www.shecodes.io/">read more about us</a>
+    <br>
+    <hr>
+    <div class="contaner">
+        <div class="image" id="left">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/958/original/dog.jpeg?1677914957" alt="">
+            <h2>I already have a dog</h2>
+            <p><strong>Dog</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Harum itaque excepturi distinctio ratione quibusdam exercitationem quisquam autem ipsa provident voluptas voluptates,
+                 mollitia, velit atque sequi voluptatem architecto unde nesciunt voluptate?</p>
+                 <button id="first"><em>another puppy</em> </button>
+        </div>
+        <div class="image">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/960/original/download_%283%29.jpeg?1677919367" alt="">
+            <h2>I have never had a dog</h2>
+            <p><strong> Dog</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Harum itaque excepturi distinctio ratione quibusdam exercitationem quisquam autem ipsa provident voluptas voluptates,
+                 mollitia, velit atque sequi voluptatem architecto unde nesciunt voluptate?</p>
+                 <button id="second"><em>my first puppy</em></button>
+        </div>
+       
+    </div>
+    <script>
+        function term() {
+            let firstName= prompt("What is your first name? ")
+            let work = prompt("How many hours a day do you work?")
+            let text = document.querySelector("h1")
+            if (work>6) {
+                text.innerHTML = firstName + " You don't have enough time for more dogs 😞"
+            }
+            else{
+                text.innerHTML = "i can't wait to be your new child "+firstName + "🐶🤎"
+            }
+        }
+        alert(" please click on button")
+        let first = document.querySelector("button")
+        first.addEventListener("click",term)
+        let second = document.getElementById("second")
+        second.addEventListener("click",term)
+    </script>
+</body>
+</html>
